@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import {
   collection,
   doc,
@@ -62,7 +62,7 @@ export const Profile = () => {
                   <div className='me-lg-auto col-lg-3'>
                     <div className='border-1 shadowf mb-6 mb-lg-0 card'>
                       <div className='bg-gray-100 py-4 border-0 text-center card-header'>
-                        <a href='#' className='d-inline-block'>
+                        <Link href='#' className='d-inline-block'>
                           <div className='avatar avatar-xxl p-2 mb-2'>
                             <div className='position-relative h-100 overflow-hidden rounded-circle'>
                               <span className='box-sizing:border-box;display:inline-block;overflow:hidden;width:144px;height:144px;background:none;opacity:1;border:0;margin:0;padding:0;position:relative'>
@@ -70,7 +70,7 @@ export const Profile = () => {
                               </span>
                             </div>
                           </div>
-                        </a>
+                        </Link>
                         <h5>{user.firstname}</h5>
                         <p className='text-muted text-sm mb-0'>
                           Los Angeles, CA
@@ -93,60 +93,44 @@ export const Profile = () => {
                         </div>
                         <hr />
                         <h6>Jack provided</h6>
-                        <ul className='text-muted card-text'>
-                          <li>Government ID</li>
-                         
-                        </ul>
                         <ul className='nav nav-pills-primary-soft flex-column'>
                           <li className='nav-item'>
-                            <a className='nav-link' href='account-profile.html'>
+                            <Link className='nav-link' href='account-profile.html'>
                               <i className='bi bi-person fa-fw me-2'></i>My Profile
-                            </a>
+                            </Link>
                           </li>
                           <li className='nav-item'>
-                            <a className='nav-link' href='account-bookings.html'>
+                            <Link className='nav-link' href='account-bookings.html'>
                               <i className='bi bi-ticket-perforated fa-fw me-2'></i>
                               My Bookings
-                            </a>
+                            </Link>
                           </li>
+                          
+                         
                           <li className='nav-item'>
-                            <a className='nav-link' href='account-travelers.html'>
-                              <i className='bi bi-people fa-fw me-2'></i>Travelers
-                            </a>
-                          </li>
-                          <li className='nav-item'>
-                            <a
-                              className='nav-link active'
-                              href='account-payment-details.html'
-                            >
-                              <i className='bi bi-wallet fa-fw me-2'></i>Payment
-                              Details
-                            </a>
-                          </li>
-                          <li className='nav-item'>
-                            <a className='nav-link' href='account-wishlist.html'>
+                            <Link className='nav-link' href='account-wishlist.html'>
                               <i className='bi bi-heart fa-fw me-2'></i>Wishlist
-                            </a>
+                            </Link>
                           </li>
                           <li className='nav-item'>
-                            <a className='nav-link' href='account-settings.html'>
+                            <Link className='nav-link' href='account-settings.html'>
                               <i className='bi bi-gear fa-fw me-2'></i>Settings
-                            </a>
+                            </Link>
                           </li>
                           <li className='nav-item'>
-                            <a className='nav-link' href='account-delete.html'>
+                            <Link className='nav-link' href='account-delete.html'>
                               <i className='bi bi-trash fa-fw me-2'></i>Delete
                               Profile
-                            </a>
+                            </Link>
                           </li>
                           <li className='nav-item'>
-                            <a
+                            <Link
                               className='nav-link text-danger bg-danger-soft-hover'
                               href='#'
                             >
                               <i className='fas fa-sign-out-alt fa-fw me-2'></i>Sign
                               Out
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
